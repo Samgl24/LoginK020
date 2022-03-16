@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginK020.negocio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,27 @@ namespace LoginK020
     /// </summary>
     public partial class MainWindow : Window
     {
+        private LoginService login = new LoginService();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string username = usernameTextbox.Text;
+            string password = passwordTextbox.Password;
+
+            if(login.check(username, password))
+            {
+                //salidaLabel.Content = "Usuario logeado";
+                MessageBox.Show("Usuario logeado con exito");
+            }
+            else
+            {
+                //salidaLabel.Content = "Password incorrecta";
+                MessageBox.Show("Error", " Usuario o Password incorrectos");
+            }
         }
     }
 }
