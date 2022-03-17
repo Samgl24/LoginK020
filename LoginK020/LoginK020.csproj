@@ -7,4 +7,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="B.png" />
+    <None Remove="f.png" />
+    <None Remove="miau.png" />
+    <None Remove="O.png" />
+    <None Remove="panamiguel.png" />
+    <None Remove="uwu.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="B.png" />
+    <Resource Include="f.png" />
+    <Resource Include="miau.png" />
+    <Resource Include="O.png" />
+    <Resource Include="panamiguel.png" />
+    <Resource Include="uwu.png" />
+  </ItemGroup>
+
 </Project>

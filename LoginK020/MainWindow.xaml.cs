@@ -32,16 +32,24 @@ namespace LoginK020
             string username = usernameTextbox.Text;
             string password = passwordTextbox.Password;
 
-            if(login.check(username, password))
+            if(login.CheckArchivoTexto(username, password))
             {
                 //salidaLabel.Content = "Usuario logeado";
-                MessageBox.Show("Usuario logeado con exito");
+                //MessageBox.Show("Usuario logeado con exito");
+                VentanaPrincipal ventanaprincipal = new VentanaPrincipal();
+                ventanaprincipal.Show();
+                this.Close();
             }
             else
             {
                 //salidaLabel.Content = "Password incorrecta";
                 MessageBox.Show("Error", " Usuario o Password incorrectos");
             }
+        }
+
+        private void checkArchivoTexto(string username, string password)
+        {
+            throw new NotImplementedException();
         }
     }
 }

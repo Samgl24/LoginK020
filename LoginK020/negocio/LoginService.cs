@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginK020.datos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +17,23 @@ namespace LoginK020.negocio
             if (usernameValido == username && passwordValido == password)
             {
                 return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool CheckArchivoTexto(string username, string password)
+        {
+            LoginDao loginDao = new LoginDao();
+            Usuario usuario = loginDao.readFile();
+            if (usuario != null)
+            {
+                if(usuario.Username == username && usuario.Password == password)
+                {
+                    return true;
+                }
+                else { return false; }
             }
             else
             {
