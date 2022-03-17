@@ -32,7 +32,7 @@ namespace LoginK020
             string username = usernameTextbox.Text;
             string password = passwordTextbox.Password;
 
-            if(login.CheckArchivoTexto(username, password))
+            if(login.CheckContraBaseDatos(username, password))
             {
                 //salidaLabel.Content = "Usuario logeado";
                 //MessageBox.Show("Usuario logeado con exito");

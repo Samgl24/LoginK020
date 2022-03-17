@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="B.png" />
     <Resource Include="f.png" />
     <Resource Include="miau.png" />

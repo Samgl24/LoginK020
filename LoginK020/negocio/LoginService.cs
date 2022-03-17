@@ -40,6 +40,17 @@ namespace LoginK020.negocio
                 return false;
             }
         }
-
+        public  bool CheckContraBaseDatos(string username, string password)
+        {
+            UsuariosDao usuariosDao = new UsuariosDao();
+            Usuario user = usuariosDao.buscarUsuarioPorUsername(username, password);
+            if(user != null)
+            {
+                Console.WriteLine(" usuario " + user.Username + " existe en la base de datos");
+                return true; 
+            }
+            Console.WriteLine("Usuario no existe en la base de datos");
+            return false;
+        }
     }
 }

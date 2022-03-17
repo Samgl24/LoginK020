@@ -9,7 +9,10 @@ namespace LoginK020.datos
 {
     internal class LoginDao
     {
+        
         private const string NOMBRE_ARCHIVO = "C:\\Riot Games\\usuarios.txt";
+
+
         public Usuario readFile()
         {
             
